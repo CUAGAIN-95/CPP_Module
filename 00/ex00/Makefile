@@ -6,7 +6,7 @@
 #    By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/24 02:29:26 by yeonhlee          #+#    #+#              #
-#    Updated: 2021/05/25 16:30:04 by yeonhlee         ###   ########.fr        #
+#    Updated: 2021/05/26 10:17:19 by yeonhlee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,9 +16,10 @@ CC		=	clang++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM		=	rm -rf
 
-INC		=	-I ./
+INC		=	-I ./includes
 
-SRCS	=	$(addprefix , megaphone.cpp \
+SRCS	=	$(addprefix ./srcs/, \
+			megaphone.cpp \
 			)
 
 OBJS	=	$(SRCS:.cpp=.o)
