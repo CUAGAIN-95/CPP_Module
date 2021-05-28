@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/29 01:11:47 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/05/29 04:06:50 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/05/29 05:17:23 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,10 @@
 int			main(void)
 {
 	Phonebook		pb;
-	
-	Phonebook::title();
+	std::string		str;
+
+
+	pb.title();
 	pb.phonebook();
 	return (0);
 }

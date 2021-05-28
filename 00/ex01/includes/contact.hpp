@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 17:22:06 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/05/29 04:07:12 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/05/29 05:11:09 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,10 @@ class	Contact
 		std::string		favorite_meal;
 		std::string		underwear_color;
 		std::string		darkest_secret;
-	
+		bool			empty;
+
 	public:
-		Contact() {}
+		Contact(): empty(true) {}
 		~Contact() {}
 		
 		void	set_first_name(const std::string &_first_name)
@@ -58,7 +59,10 @@ class	Contact
 		{ this->underwear_color = _underwear_color; }
 		void	set_darkest_secret(const std::string &_darkest_secret)
 		{ this->darkest_secret = _darkest_secret; }
-		
+		void	set_empty(const bool &_empty)
+		{ this->empty = _empty; }
+
+
 		const std::string	&get_first_name(void) const
 		{ return (this->first_name); }
 		const std::string	&get_second_name(void) const
@@ -81,6 +85,8 @@ class	Contact
 		{ return (this->underwear_color); }
 		const std::string	&get_darkest_secret(void) const
 		{ return (this->darkest_secret); }
+		const bool			&get_empty(void) const
+		{ return (this->empty); }
 };
 
 #endif
