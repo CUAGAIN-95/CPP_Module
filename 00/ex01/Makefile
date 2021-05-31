@@ -6,7 +6,7 @@
 #    By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/24 02:29:26 by yeonhlee          #+#    #+#              #
-#    Updated: 2021/05/29 04:05:24 by yeonhlee         ###   ########.fr        #
+#    Updated: 2021/06/01 08:22:09 by yeonhlee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,8 @@ INC		=	-I ./includes
 
 SRCS	=	$(addprefix ./srcs/, \
 			main.cpp \
+			contact.cpp \
+			phonebook.cpp \
 			)
 
 OBJS	=	$(SRCS:.cpp=.o)
