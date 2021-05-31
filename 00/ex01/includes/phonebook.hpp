@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 09:21:59 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/01 01:11:50 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/01 01:14:14 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,6 @@ class	Phonebook
 	public:
 		Phonebook(): count(0) {}
 		~Phonebook() {}
-
-	// ===========
-		void	print_count(void) const
-		{ std::cout << "count : " << count << "<" << std::endl; }
-	// ===========
-
 
 		void		phonebook(void)
 		{
