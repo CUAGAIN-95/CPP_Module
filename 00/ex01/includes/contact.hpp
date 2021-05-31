@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 17:22:06 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/05/29 05:11:09 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/01 00:10:28 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,13 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <cstdlib>
 
 class	Contact
 {
 	private:
 		std::string		first_name;
-		std::string		second_name;
+		std::string		last_name;
 		std::string		nickname;
 		std::string		login;
 		std::string		postal_address;
@@ -39,8 +40,8 @@ class	Contact
 		
 		void	set_first_name(const std::string &_first_name)
 		{ this->first_name = _first_name; }
-		void	set_second_name(const std::string &_second_name)
-		{ this->second_name = _second_name; }
+		void	set_last_name(const std::string &_last_name)
+		{ this->last_name = _last_name; }
 		void	set_nickname(const std::string &_nickname)
 		{ this->nickname = _nickname; }
 		void	set_login(const std::string &_login)
@@ -65,8 +66,8 @@ class	Contact
 
 		const std::string	&get_first_name(void) const
 		{ return (this->first_name); }
-		const std::string	&get_second_name(void) const
-		{ return (this->second_name); }
+		const std::string	&get_last_name(void) const
+		{ return (this->last_name); }
 		const std::string	&get_nickname(void) const
 		{ return (this->nickname); }
 		const std::string	&get_login(void) const

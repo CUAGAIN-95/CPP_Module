@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 09:21:59 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/05/29 05:16:39 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/01 01:11:50 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,22 +38,20 @@ class	Phonebook
 			
 			while (true)
 			{
-				std::cout << "Enter a command (ADD or SEARCH or EXIT):" << std::endl;
+				std::cout << "\tEnter a command (ADD or SEARCH or EXIT):" << std::endl;
+				std::cout << ">";
 				std::getline(std::cin, input);
 				if (!input.compare("ADD") || !input.compare("add"))
-				{
-					std::cout << "INPUT DATA = ADD!" << std::endl;
 					add();
-				}
 				else if (!input.compare("SEARCH") || !input.compare("search"))
-				{
-					std::cout << "INPUT DATA = SEARCH!" << std::endl;
 					search();
-				}
 				else if (!input.compare("EXIT") || !input.compare("exit"))
 					break ;
 				else
-					std::cout << "INPUT DATA ERROR!!" << std::endl;
+				{
+					std::cout << "\tINPUT DATA ERROR!!" << std::endl;
+					std::cout << std::endl;
+				}
 			}
 		}
 
@@ -61,7 +59,7 @@ class	Phonebook
 		{
 			std::string input_data;
 
-			std::cout << data_name << " : ";
+			std::cout << std::setw(16) << data_name << " : ";
 			std::getline(std::cin, input_data);
 			return (input_data);
 		}
@@ -70,8 +68,9 @@ class	Phonebook
 		{
 			if (count == 8)
 				count = 0;
+			std::cout << "\tEnter input data" << std::endl;
 			contact[count].set_first_name(input_data("first_name"));
-			contact[count].set_second_name(input_data("second_name"));
+			contact[count].set_last_name(input_data("last_name"));
 			contact[count].set_nickname(input_data("nickname"));
 			contact[count].set_login(input_data("login"));
 			contact[count].set_postal_address(input_data("postal_address"));
@@ -85,20 +84,89 @@ class	Phonebook
 			count++;
 		}
 		
-		void	output_data()
+		void	print_data(std::string str)
 		{
-			
+			if (str.size() < 10)
+				std::cout << std::setw(10) << str << " | ";
+			else
+				std::cout << str.substr(0, 9) << "." << " | ";
+		}
+
+		void	index_list(int i)
+		{
+			std::cout << std::setw(10) << i << " | ";
+			print_data(contact[i].get_first_name());
+			print_data(contact[i].get_last_name());
+			print_data(contact[i].get_nickname());
+			std::cout << std::endl;
+		}
+
+		void	print_data_list(int i)
+		{
+			std::cout << std::setw(16) << "first_name" << " : " << contact[i].get_first_name() << std::endl;
+			std::cout << std::setw(16) << "last_name" << " : " << contact[i].get_last_name() << std::endl;
+			std::cout << std::setw(16) << "nickname" << " : " << contact[i].get_nickname() << std::endl;
+			std::cout << std::setw(16) << "login" << " : " << contact[i].get_login() << std::endl;
+			std::cout << std::setw(16) << "postal_address" << " : " << contact[i].get_postal_address() << std::endl;
+			std::cout << std::setw(16) << "email_address" << " : " << contact[i].get_email_address() << std::endl;
+			std::cout << std::setw(16) << "phone_number" << " : " << contact[i].get_phone_number() << std::endl;
+			std::cout << std::setw(16) << "birthday_date" << " : " << contact[i].get_birthday_date() << std::endl;
+			std::cout << std::setw(16) << "favorite_meal" << " : " << contact[i].get_favorite_meal() << std::endl;
+			std::cout << std::setw(16) << "underwear_color" << " : " << contact[i].get_underwear_color() << std::endl;
+			std::cout << std::setw(16) << "darkest_secret" << " : " << contact[i].get_darkest_secret() << std::endl;
+			std::cout << std::endl;
+		}
+
+		bool	check_input(std::string input, int i)
+		{ 
+			if (i == 0)
+			{
+				if (input.size() != 1)
+					return (false);
+				if (input.compare("0"))
+					return (false);
+			}
+			else if (!(0 <= i && i <= 7))
+				return (false);
+			else if (contact[i].get_empty())
+				return (false);
+			return (true);
 		}
 
 		void	search()
 		{
-			while (!contact[count].get_empty())
+			int			i;
+			std::string	input;
+		
+			if (contact[0].get_empty())
 			{
-				
-				count++;
+				std::cout << "\tPhonebook don't have data. Please add data!" << std::endl;
+				return ;
 			}
-			
+			while (1)
+			{
+				i = 0;
+				std::cout << "     index" << " | " << "first_name" << " | " << " last_name" << " | " << "  nickname" << " | " << std::endl;
+				while (!contact[i].get_empty() && i < 8)
+				{
+					index_list(i);
+					i++;
+				}
+				std::cout << "\tEnter index : ";
+				std::getline(std::cin, input);
+				if (!input.compare("EXIT") || !input.compare("exit"))
+					break ;
+				i = atoi(input.c_str());
+				if (!check_input(input, i))
+					std::cout << "\tWrong index!!!" << std::endl << std::endl;
+				else
+				{
+					print_data_list(i);
+					break ;
+				}
+			}
 		}
+
 		static void	title(void)
 		{
 			std::cout << std::endl;
