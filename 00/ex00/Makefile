@@ -6,7 +6,7 @@
 #    By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/24 02:29:26 by yeonhlee          #+#    #+#              #
-#    Updated: 2021/05/26 10:17:19 by yeonhlee         ###   ########.fr        #
+#    Updated: 2021/06/01 08:41:52 by yeonhlee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ RM		=	rm -rf
 
 INC		=	-I ./includes
 
-SRCS	=	$(addprefix ./srcs/, \
+SRCS	=	$(addprefix ,\
 			megaphone.cpp \
 			)
 

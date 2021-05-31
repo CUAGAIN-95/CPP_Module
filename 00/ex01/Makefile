@@ -6,7 +6,7 @@
 #    By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/24 02:29:26 by yeonhlee          #+#    #+#              #
-#    Updated: 2021/06/01 08:22:09 by yeonhlee         ###   ########.fr        #
+#    Updated: 2021/06/01 08:42:35 by yeonhlee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,9 +17,9 @@ CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 RM		=	rm -rf
 
-INC		=	-I ./includes
+INC		=	-I ./
 
-SRCS	=	$(addprefix ./srcs/, \
+SRCS	=	$(addprefix , \
 			main.cpp \
 			contact.cpp \
 			phonebook.cpp \
