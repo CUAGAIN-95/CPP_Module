@@ -6,11 +6,15 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 00:13:29 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/02 21:39:23 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/03 00:58:41 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ZombieEvent.hpp"
+
+#include <cstdlib>	//std::rand()
+#include <ctime>	//std::time()
+#include <string>	//std::to_string()
 
 ZombieEvent::ZombieEvent() {}
 ZombieEvent::~ZombieEvent() {}

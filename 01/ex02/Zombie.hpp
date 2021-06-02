@@ -6,14 +6,11 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 00:17:58 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/02 21:39:11 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/03 00:58:50 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <cstdlib>	//std::rand()
-#include <ctime>	//std::time()
-#include <string>	//std::to_string()
 
 class Zombie
 {
