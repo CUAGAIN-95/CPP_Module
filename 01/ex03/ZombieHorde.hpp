@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/03 00:48:45 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/05 20:47:04 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/08 17:24:17 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 class ZombieHorde
 {
 	private:
-		Zombie	zombie;
+		Zombie	*zombies;
 		int		zombie_num;
 		
 	public:
@@ -26,5 +26,5 @@ class ZombieHorde
 		void	set_zombie_num(const int &_num);
 
 		const int	&get_zombie_num(void) const;
-		
+		void	announce(void);
 };
