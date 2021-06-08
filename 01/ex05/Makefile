@@ -6,11 +6,11 @@
 #    By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/24 02:29:26 by yeonhlee          #+#    #+#              #
-#    Updated: 2021/06/08 18:59:00 by yeonhlee         ###   ########.fr        #
+#    Updated: 2021/06/08 22:33:54 by yeonhlee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	ex04
+NAME	=	HI_BRAIN_THIS_IS_HUMAN
 
 CC		=	clang++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
@@ -20,7 +20,9 @@ RM		=	rm -rf
 INC		=	-I ./
 
 SRCS	=	$(addprefix , \
-			ex04.cpp \
+			main.cpp \
+			Brain.cpp \
+			Human.cpp \
 			)
 
 OBJS	=	$(SRCS:.cpp=.o)
