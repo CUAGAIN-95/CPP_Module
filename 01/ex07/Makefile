@@ -6,7 +6,7 @@
 #    By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/24 02:29:26 by yeonhlee          #+#    #+#              #
-#    Updated: 2021/06/10 00:46:57 by yeonhlee         ###   ########.fr        #
+#    Updated: 2021/06/10 17:53:33 by yeonhlee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 RM		=	rm -rf
 
-INC		=	-I ./includes
+INC		=	-I ./
 
 SRCS	=	$(addprefix ./srcs/, \
 			main.cpp \
