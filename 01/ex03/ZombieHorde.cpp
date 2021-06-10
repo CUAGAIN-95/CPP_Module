@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/03 00:48:51 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/08 18:49:07 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/10 18:18:00 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ ZombieHorde::ZombieHorde(int _num): zombie_num(_num)
 ZombieHorde::~ZombieHorde()
 { delete [] this->zombies; }
 
-void	ZombieHorde::set_zombie_num(const int &_num)
+void	ZombieHorde::set_zombie_num(int _num)
 { this->zombie_num = _num; }
 
-const int	&ZombieHorde::get_zombie_num(void) const
+int		ZombieHorde::get_zombie_num(void) const
 { return (this->zombie_num); }
 
 void	ZombieHorde::announce(void)

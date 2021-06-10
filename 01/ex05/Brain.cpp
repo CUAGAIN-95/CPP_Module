@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 21:37:57 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/09 17:49:48 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/10 18:25:35 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 Brain::Brain(): iq(125) {}
 Brain::~Brain() {}
 
-void	Brain::set_iq(const int &_iq)
+void	Brain::set_iq(unsigned int _iq)
 { this->iq = _iq; }
 
-const unsigned int &Brain::get_iq(void) const
+unsigned int Brain::get_iq(void) const
 { return (this->iq); }
 
-std::string	Brain::identify(void)
+std::string	Brain::identify(void) const
 {
 	std::stringstream		ss;
 	unsigned long adr = (long) this;

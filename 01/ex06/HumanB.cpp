@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/09 18:02:11 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/09 19:47:17 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/10 18:38:38 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	HumanB::setWeapon(const Weapon &_weapon)
 const std::string	&HumanB::getName(void) const
 { return (this->name);}
 
-void	HumanB::attack(void)
+void	HumanB::attack(void) const
 {
 	std::cout << this->getName() << " attacks with his " << this->weapon->getType() << std::endl;
 }

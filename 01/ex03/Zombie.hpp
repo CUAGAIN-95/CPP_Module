@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 00:17:58 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/05 20:39:10 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/10 18:11:04 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ class Zombie
 	private:
 		std::string		type;
 		std::string		name;
+		
 	public:
 		Zombie();
 		Zombie(std::string _type, std::string _name);
