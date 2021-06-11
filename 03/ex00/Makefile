@@ -6,11 +6,11 @@
 #    By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/24 02:29:26 by yeonhlee          #+#    #+#              #
-#    Updated: 2021/06/11 20:49:20 by yeonhlee         ###   ########.fr        #
+#    Updated: 2021/06/11 20:57:39 by yeonhlee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	FragTrap
+NAME	=	FR4G-TP
 
 CC		=	clang++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
