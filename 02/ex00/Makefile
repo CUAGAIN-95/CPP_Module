@@ -6,7 +6,7 @@
 #    By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/24 02:29:26 by yeonhlee          #+#    #+#              #
-#    Updated: 2021/06/10 22:05:11 by yeonhlee         ###   ########.fr        #
+#    Updated: 2021/06/11 17:09:29 by yeonhlee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ INC		=	-I ./
 
 SRCS	=	$(addprefix , \
 			main.cpp \
-			Fixed.cpp \
+			Fixed.class.cpp \
 			)
 
 OBJS	=	$(SRCS:.cpp=.o)

@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.cpp                                          :+:      :+:    :+:   */
+/*   Fixed.class.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/10 21:27:42 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/11 16:54:46 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/11 17:38:35 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "Fixed.class.hpp"
 
 /*
 ** ------------------------------- CONSTRUCTOR --------------------------------
@@ -24,7 +24,7 @@ Fixed::Fixed()
 Fixed::Fixed( const Fixed & src )
 {
 	std::cout << "Copy constructor called" << std::endl;
-	this->_raw = src.getRawBits();
+	this->value = src.getRawBits();
 }
 
 /*
@@ -46,7 +46,7 @@ Fixed &				Fixed::operator=( Fixed const & rhs )
 	std::cout << "Assignation operator called" << std::endl;
 	if ( this != &rhs )
 	{
-		this->_raw = rhs.getRawBits();
+		this->value = rhs.getRawBits();
 
 	}
 	return *this;
@@ -67,12 +67,12 @@ Fixed &				Fixed::operator=( Fixed const & rhs )
 int		Fixed::getRawBits(void) const
 {
 	std::cout << "getRawBits member function called" << std::endl;
-	return (this->_raw);
+	return (this->value);
 }
 
 /* SETTER*/
 void	Fixed::setRawBits(int const raw)
-{ this->_raw = raw; }
+{ this->value = raw; }
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------

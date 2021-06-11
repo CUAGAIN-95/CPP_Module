@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   Fixed.class.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/10 21:27:28 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/10 22:13:44 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/11 17:38:30 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-# define FIXED_HPP
+#ifndef FIXED_CLASS_HPP
+# define FIXED_CLASS_HPP
 
 # include <iostream>
 # include <string>
@@ -19,7 +19,7 @@
 class Fixed
 {
 	private:
-		int		_raw;
+		int		value;
 		static const int	 number_of_fractional_bits = 8;
 
 	public:
