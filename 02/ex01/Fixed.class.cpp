@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/10 21:27:42 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/11 19:37:59 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/11 19:51:08 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-Fixed::Fixed()
+Fixed::Fixed() : value(0)
 {
 	std::cout << "Default constructor called" << std::endl;
 }
