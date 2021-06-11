@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/10 21:27:42 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/11 17:38:35 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/11 19:40:42 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ Fixed::Fixed( const Fixed & src )
 {
 	std::cout << "Copy constructor called" << std::endl;
 	this->value = src.getRawBits();
+	// *this = src;		// 서브젝트와 동일하게 출력
 }
 
 /*
@@ -47,7 +48,6 @@ Fixed &				Fixed::operator=( Fixed const & rhs )
 	if ( this != &rhs )
 	{
 		this->value = rhs.getRawBits();
-
 	}
 	return *this;
 }
