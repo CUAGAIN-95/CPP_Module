@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/13 15:26:54 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/13 16:05:35 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/13 17:56:15 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ int		main(void)
 	// 랜덤 시드 설정 (시간을 기준)
 	std::srand(static_cast<unsigned int>(std::time(0)));
 
-	ScavTrap	a;
 	FragTrap	b("Frag_yeonhlee");
+	ScavTrap	a;
 	const std::string &target = "target";
 
 	std::cout << std::endl;

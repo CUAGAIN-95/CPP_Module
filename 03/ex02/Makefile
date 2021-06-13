@@ -6,11 +6,11 @@
 #    By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/24 02:29:26 by yeonhlee          #+#    #+#              #
-#    Updated: 2021/06/13 11:05:02 by yeonhlee         ###   ########.fr        #
+#    Updated: 2021/06/13 16:15:45 by yeonhlee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	SCAV-TP
+NAME	=	CLAP-TP
 
 CC		=	clang++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
@@ -21,6 +21,7 @@ INC		=	-I ./
 
 SRCS	=	$(addprefix , \
 			main.cpp \
+			ClapTrap.cpp \
 			FragTrap.cpp \
 			ScavTrap.cpp \
 			)
