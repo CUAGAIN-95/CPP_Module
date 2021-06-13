@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/13 19:04:02 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/13 19:13:24 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/13 20:06:50 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,20 @@
 */
 
 NinjaTrap::NinjaTrap()
-	:	ClapTrap("yeonhleeNinja", 60, 60 ,120, 120, 1, 60, 5, 0, "NINJA-TP")
+	:	ClapTrap("yeonhleeNinja", 60, 60 ,120, 120, 1, 60, 5, 0, "NINJ4-TP")
 {
 	std::cout << this->type << " Default constructor called" << std::endl;
 }
 
 NinjaTrap::NinjaTrap(std::string _name)
-:	ClapTrap(_name, 60, 60 ,120, 120, 1, 60, 5, 0, "NINJA-TP")
+:	ClapTrap(_name, 60, 60 ,120, 120, 1, 60, 5, 0, "NINJ4-TP")
 {
 	std::cout << this->type << " Name parameter constructor called" << std::endl;
 }
 
 NinjaTrap::NinjaTrap( const NinjaTrap & src )
 {
-	std::cout << this->type <<  " Copy constructor called" << std::endl;
+	std::cout << this->type << " Copy constructor called" << std::endl;
 	*this = src;
 }
 
@@ -67,7 +67,26 @@ NinjaTrap	&NinjaTrap::operator=(const NinjaTrap &op)
 ** --------------------------------- METHODS ----------------------------------
 */
 
+/* MEMBER FUNCTION */
+void	NinjaTrap::ninjaShoebox(ClapTrap &claptrap)
+{
+	std::cout << this->type << " " << this->name << " likes " << claptrap.getType() << " " << claptrap.getName() << " :)" << std::endl;
+}
 
+void	NinjaTrap::ninjaShoebox(FragTrap &fragtrap)
+{
+	std::cout << this->type << " " << this->name << " hates " << fragtrap.getType() << " " << fragtrap.getName() << " :(" << std::endl;
+}
+
+void	NinjaTrap::ninjaShoebox(ScavTrap &scavtrap)
+{
+	std::cout << this->type << " " << this->name << " loves " << scavtrap.getType() << " " << scavtrap.getName() << " ^^b" << std::endl;
+}
+
+void	NinjaTrap::ninjaShoebox(NinjaTrap &ninjatrap)
+{
+	std::cout << this->type << " " << this->name << " laughs at " << ninjatrap.getType() << " " << ninjatrap.getName() << " XD" << std::endl;
+}
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------

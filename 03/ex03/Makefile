@@ -6,11 +6,11 @@
 #    By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/24 02:29:26 by yeonhlee          #+#    #+#              #
-#    Updated: 2021/06/13 16:15:45 by yeonhlee         ###   ########.fr        #
+#    Updated: 2021/06/13 20:06:17 by yeonhlee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	CLAP-TP
+NAME	=	NINJ4-TP
 
 CC		=	clang++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
@@ -24,6 +24,7 @@ SRCS	=	$(addprefix , \
 			ClapTrap.cpp \
 			FragTrap.cpp \
 			ScavTrap.cpp \
+			NinjaTrap.cpp \
 			)
 
 OBJS	=	$(SRCS:.cpp=.o)
