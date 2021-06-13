@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/13 15:26:54 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/13 21:03:17 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/13 21:12:46 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,20 +42,18 @@ int		main(void)
 	super.vaulthunter_dot_exe(target);
 	super.vaulthunter_dot_exe(target);
 	super.vaulthunter_dot_exe(target);
-	super.vaulthunter_dot_exe(target);
 	std::cout << std::endl;
 	
-
-	NinjaTrap	n("yeonhlee_ninja");
 	NinjaTrap	n_f("ninja_friend");
 	ClapTrap	c("ccc");
 	FragTrap	f("ffff");
 	ScavTrap	s("ss");
 
-	n.ninjaShoebox(c);
-	n.ninjaShoebox(f);
-	n.ninjaShoebox(s);
-	n.ninjaShoebox(n_f);
+	std::cout << std::endl;
+	super.ninjaShoebox(c);
+	super.ninjaShoebox(f);
+	super.ninjaShoebox(s);
+	super.ninjaShoebox(n_f);
 	std::cout << std::endl;
 
 	
