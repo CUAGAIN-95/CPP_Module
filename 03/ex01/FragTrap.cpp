@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/11 20:50:18 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/13 08:08:18 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/13 21:06:43 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -154,6 +154,11 @@ void	FragTrap::takeDamage(unsigned int amount)
 
 void	FragTrap::beRepaired(unsigned int amount)
 {
+	if (this->hitPoints == this->maxHitPoints)
+	{
+		std::cout << "FR4G-TP " << this->name << " is max hitpoints!!" << std::endl;
+		return ;
+	}
 	this->hitPoints += amount;
 	if (this->hitPoints > this->maxHitPoints)
 		this->hitPoints = this->maxHitPoints;

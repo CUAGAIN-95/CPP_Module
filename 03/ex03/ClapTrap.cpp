@@ -118,6 +118,11 @@ void	ClapTrap::takeDamage(unsigned int amount)
 }
 void	ClapTrap::beRepaired(unsigned int amount)
 {
+	if (this->hitPoints == this->maxHitPoints)
+	{
+		std::cout << this->type << " " << this->name << " is max hitpoints!!" << std::endl;
+		return ;
+	}
 	this->hitPoints += amount;
 	if (this->hitPoints > this->maxHitPoints)
 		this->hitPoints = this->maxHitPoints;

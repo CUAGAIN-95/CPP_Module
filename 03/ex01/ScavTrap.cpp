@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/13 10:47:58 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/13 16:00:34 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/13 21:06:04 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,6 +117,11 @@ void	ScavTrap::takeDamage(unsigned int amount)
 
 void	ScavTrap::beRepaired(unsigned int amount)
 {
+	if (this->hitPoints == this->maxHitPoints)
+	{
+		std::cout << "SCAV-TP " << this->name << " is max hitpoints!!" << std::endl;
+		return ;
+	}
 	this->hitPoints += amount;
 	if (this->hitPoints > this->maxHitPoints)
 		this->hitPoints = this->maxHitPoints;
