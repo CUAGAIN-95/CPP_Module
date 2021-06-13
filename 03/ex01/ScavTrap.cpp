@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/13 10:47:58 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/13 15:18:05 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/13 16:00:34 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,7 +126,10 @@ void	ScavTrap::beRepaired(unsigned int amount)
 
 void	ScavTrap::challengeNewComer(void)
 {
-	std::cout << std::endl;
+	int		rand_num = std::rand() % 4;
+	std::string		challenge_list[] = {" I'm sad   :(", " I'm happy :)", "I'm angry  :|", "I'm good   XD"};
+
+	std::cout << "SCAV-TP " << this->name << challenge_list[rand_num] << std::endl;
 }
 
 /*

@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/13 10:47:55 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/13 13:55:50 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/13 15:36:47 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <iostream>
 # include <string>
+# include <cstdlib>
+# include <ctime>
 
 class ScavTrap
 {
