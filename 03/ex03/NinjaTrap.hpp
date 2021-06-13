@@ -1,24 +1,38 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   NinjaTrap.hpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/06/13 19:01:57 by yeonhlee          #+#    #+#             */
+/*   Updated: 2021/06/13 19:22:23 by yeonhlee         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef NINJATRAP_HPP
 # define NINJATRAP_HPP
 
-# include <iostream>
-# include <string>
+# include "ClapTrap.hpp"
+# include "FragTrap.hpp"
+# include "ScavTrap.hpp"
 
-class NinjaTrap
+class NinjaTrap : public ClapTrap
 {
+	private:
 
 	public:
-
 		NinjaTrap();
+		NinjaTrap(std::string name);
 		NinjaTrap( NinjaTrap const & src );
 		~NinjaTrap();
 
-		NinjaTrap &		operator=( NinjaTrap const & rhs );
+		NinjaTrap		&operator=(const NinjaTrap &op);
 
-	private:
-
+		/* MEMBER FUNCTION */
+		void	ninjaShoebox();
 };
 
-std::ostream &			operator<<( std::ostream & o, NinjaTrap const & i );
+// std::ostream &			operator<<( std::ostream & o, NinjaTrap const & i );
 
 #endif /* ******************************************************* NINJATRAP_H */

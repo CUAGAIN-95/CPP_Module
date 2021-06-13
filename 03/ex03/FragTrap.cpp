@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/11 20:50:18 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/13 17:47:17 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/13 19:10:41 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ FragTrap::FragTrap(std::string _name)
 
 FragTrap::FragTrap(const FragTrap &src)
 {
-	std::cout << this->type <<  " Copy constructor called" << std::endl;
+	std::cout << this->type << " Copy constructor called" << std::endl;
 	*this = src;
 }
 
