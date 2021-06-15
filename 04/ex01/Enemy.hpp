@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 21:56:55 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/15 12:30:27 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/15 13:18:58 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ class Enemy
 		int		getHP(void) const;
 
 		// MEMBER FUNCTION
-		virtual void	takeDamage(int);
+		virtual void	takeDamage(int) = 0;
 
 
 };
