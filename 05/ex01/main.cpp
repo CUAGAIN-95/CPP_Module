@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 18:09:19 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/16 19:36:46 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/16 19:48:36 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ int		main(void)
 	{
 		std::cerr << e.what() << std::endl;;
 	}
+
+	std::cout << std::endl << std::endl;
 
 	try
 	{

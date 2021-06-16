@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 12:23:27 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/16 19:33:45 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/16 19:46:50 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ class Form
 	private:
 		std::string const &name;
 		bool	isSigned;
-		const int		gradeRequiredSign;
-		const int		gradeRequiredExecute;
+		const int		signGrade;
+		const int		executeGrade;
 
 		Form();
 		
@@ -40,8 +40,8 @@ class Form
 		// GETTER
 		const std::string	&getName(void) const;
 		bool	getIsSigned(void) const;
-		int		getGradeRequiredSign(void) const;
-		int		getGradeRequiredExecute(void) const;
+		int		getSignGrade(void) const;
+		int		getExecuteGrade(void) const;
 
 		// MEMBER FUNCTION
 		void	beSigned(Bureaucrat const &);

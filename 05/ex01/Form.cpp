@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 12:23:28 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/16 19:35:05 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/16 19:47:11 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,20 @@
 */
 
 Form::Form(std::string const &_name, const int _sign, const int _execute)
-	:	name(_name), isSigned(false), gradeRequiredSign(_sign), gradeRequiredExecute(_execute)
+	:	name(_name), isSigned(false), signGrade(_sign), executeGrade(_execute)
 {
-	if (gradeRequiredSign < 1 || gradeRequiredExecute < 1)
+	if (signGrade < 1 || executeGrade < 1)
 		throw Form::GradeTooHighException();
-	else if (gradeRequiredSign > 150 || gradeRequiredExecute > 150)
+	else if (signGrade > 150 || executeGrade > 150)
 		throw Form::GradeTooLowException();
 }
 
 Form::Form( const Form & src )
-	:	name(src.name), gradeRequiredSign(src.gradeRequiredSign), gradeRequiredExecute(src.gradeRequiredExecute)
+	:	name(src.name), signGrade(src.signGrade), executeGrade(src.executeGrade)
 {
-	if (gradeRequiredSign < 1 || gradeRequiredExecute < 1)
+	if (signGrade < 1 || executeGrade < 1)
 		throw Form::GradeTooHighException();
-	else if (gradeRequiredSign > 150 || gradeRequiredExecute > 150)
+	else if (signGrade > 150 || executeGrade > 150)
 		throw Form::GradeTooLowException();
 	*this = src;
 }
@@ -59,8 +59,8 @@ Form &				Form::operator=( Form const & rhs )
 std::ostream &			operator<<( std::ostream & o, Form const & i )
 {
 	o << "| name >> " << i.getName() << " | isSigned >> " << (i.getIsSigned() ? "true" : "false") \
-		<< " | gradeRequiredSign >> " << i.getGradeRequiredSign() \
-		<< " | gradeRequiredExecute >> " << i.getGradeRequiredExecute();
+		<< " | signGrade >> " << i.getSignGrade() \
+		<< " | executeGrade >> " << i.getExecuteGrade();
 	return o;
 }
 
@@ -72,7 +72,7 @@ std::ostream &			operator<<( std::ostream & o, Form const & i )
 // MEMBER FUNCTION
 void	Form::beSigned(Bureaucrat const &b)
 {
-	if (b.getGrade() > this->gradeRequiredSign)
+	if (b.getGrade() > this->signGrade)
 		throw Form::GradeTooLowException();
 	this->isSigned = true;
 }
@@ -88,11 +88,11 @@ const std::string	&Form::getName(void) const
 bool	Form::getIsSigned(void) const
 { return (this->isSigned); }
 
-int		Form::getGradeRequiredSign(void) const
-{ return (this->gradeRequiredSign); }
+int		Form::getSignGrade(void) const
+{ return (this->signGrade); }
 
-int		Form::getGradeRequiredExecute(void) const
-{ return (this->gradeRequiredExecute); }
+int		Form::getExecuteGrade(void) const
+{ return (this->executeGrade); }
 
 /*
 ** -------------------------------- EXCEPTIONS --------------------------------

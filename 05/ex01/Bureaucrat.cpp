@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 11:12:57 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/16 19:35:34 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/16 19:47:37 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ void	Bureaucrat::signForm(Form &form)
 {
 	if (form.getIsSigned())
 		std::cout << this->name << " cannot sign " << form.getName() << " because " << this->name << " is already signed" << std::endl;
-	else if (this->grade <= form.getGradeRequiredSign())
+	else if (this->grade <= form.getSignGrade())
 		std::cout << this->name << " sgins " << form.getName() << std::endl;
 	else
 		std::cout << this->name << " cannot sign " << form.getName() << " because " << this->name << "'s grade is too low : " << this->grade << std::endl;
