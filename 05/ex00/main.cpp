@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 11:12:32 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/16 12:19:23 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/16 16:34:04 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int		main(void)
 		Bureaucrat	ex1("ex1", 0);
 		std::cout << ex1;
 	}
-	catch(const std::exception& e)
+	catch(std::exception& e)
 	{
 		std::cerr << e.what() << std::endl;;
 	}
@@ -41,7 +41,7 @@ int		main(void)
 		Bureaucrat	ex2("ex2", 151);
 		std::cout << ex2;
 	}
-	catch(const std::exception& e)
+	catch(std::exception& e)
 	{
 		std::cerr << e.what() << std::endl;
 	}
@@ -53,7 +53,7 @@ int		main(void)
 		ex3.increment();
 		std::cout << ex3;
 	}
-	catch(const std::exception& e)
+	catch(std::exception& e)
 	{
 		std::cerr << e.what() << std::endl;;
 	}
@@ -65,7 +65,7 @@ int		main(void)
 		ex4.decrement();
 		std::cout << ex4;
 	}
-	catch(const std::exception& e)
+	catch(std::exception& e)
 	{
 		std::cerr << e.what() << std::endl;
 	}

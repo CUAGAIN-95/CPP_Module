@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 11:12:56 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/16 11:57:56 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/16 17:02:24 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class Bureaucrat
 		std::string const	name;
 		int					grade;
 		
+		Bureaucrat();
 
 	public:
 		Bureaucrat(std::string const &_name, int _grade);
