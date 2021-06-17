@@ -6,7 +6,7 @@
 #    By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/24 02:29:26 by yeonhlee          #+#    #+#              #
-#    Updated: 2021/06/17 02:08:02 by yeonhlee         ###   ########.fr        #
+#    Updated: 2021/06/17 13:08:29 by yeonhlee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ all:		$(NAME)
 			
 clean:
 			$(RM) $(OBJS)
-			$(RM) ShrubberyCreationmake_shrubbery
+			$(RM) ShrubberyCreation_shrubbery
 fclean:		clean
 			$(RM) $(NAME)
 re:			fclean all
