@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 03:47:26 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/18 19:45:50 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/18 19:49:43 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ class Array
 		}
 		virtual ~Array()
 		{
-			if (this->_size > 0)
-				delete[] this->arr;
+			if (arr)
+				delete[] arr;
 		}
 		Array & operator=(const Array & src)
 		{
