@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/18 16:20:37 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/18 17:28:04 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/18 23:41:20 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,17 +68,6 @@ int		main(void)
 			mstack.pop();
 		
 		std::stack<int> s(mstack);	// check Mutantstack inherit stack
-		
-		// Mutantstack<int, std::list<int> > mlist;
-		// mlist.push(3);
-		// mlist.push(5);
-		// Mutantstack<int, std::list<int> >::iterator it = mlist.begin();
-		// Mutantstack<int, std::list<int> >::iterator ite = mlist.end();
-		// while (it != ite)
-		// {
-		// 	std::cout << *it << std::endl;
-		// 	++it;
-		// }
 	}
 	catch (std::exception &e) {
 		std::cout << e.what() << std::endl;

@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/18 15:09:09 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/18 15:46:02 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/18 23:34:07 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <string>
+# include <algorithm>
 # include <vector>
 
 class Span
@@ -32,7 +33,7 @@ class Span
 
 		Span &		operator=( Span const & rhs );
 
-		template <class InputIterator>		// vector::assign
+		template <class InputIterator>		// vector::assign 기존에 있던 데이터 모두 지우고 다시 넣기
 		void		addNumber(InputIterator first, InputIterator last) {
 			vc.assign(first, last);
 		};

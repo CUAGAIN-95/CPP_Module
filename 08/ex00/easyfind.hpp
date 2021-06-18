@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/18 13:40:38 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/18 15:07:41 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/18 23:20:59 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <string>
+#include <algorithm>
 
 class CannotFindValue: public std::exception
 {
