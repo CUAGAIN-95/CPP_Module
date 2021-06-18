@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 03:47:26 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/17 05:32:13 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/18 12:42:57 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,7 @@ class Array
 
 	public:
 		Array() : arr(new T[0]), _size(0) {}
-		Array(unsigned int n) : arr(new T[n]), _size(n)
-		{
-			for (unsigned int i = 0; i < n; i++)
-			{
-				T	*tmp = arr + i;
-				tmp = new T();
-			}
-		}
+		Array(unsigned int n) : arr(new T[n]()), _size(n) {}
 		Array( const Array & src)
 		{
 			*this = src;

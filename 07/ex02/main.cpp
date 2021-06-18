@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 03:47:28 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/17 05:33:57 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/18 12:48:44 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int		main(void)
 {
 	Array<int> arr;
 
-	std::cout << arr.size() << std::endl;
+	std::cout << arr.size() << std::endl;		// default size = 0
 
 	try {
 		Array<std::string> arr1(2);
@@ -26,7 +26,7 @@ int		main(void)
 		arr1[1] = "world";
 		std::cout << arr1[0] << std::endl;
 		std::cout << arr1[1] << std::endl;
-		std::cout << arr1[2] << std::endl;
+		// std::cout << arr1[2] << std::endl;	// exception error case
 		Array<Student*> arr2(3);
 		arr2[0] = new Student("Apeach", 1);
 		arr2[1] = new Student("Ryan", 2);

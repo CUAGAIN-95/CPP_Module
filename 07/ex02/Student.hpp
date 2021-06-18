@@ -6,7 +6,7 @@
 /*   By: yeonhlee <yeonhlee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 05:10:16 by yeonhlee          #+#    #+#             */
-/*   Updated: 2021/06/17 05:23:40 by yeonhlee         ###   ########.fr       */
+/*   Updated: 2021/06/18 12:43:26 by yeonhlee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class Student
 		const std::string	name;
 		int					num;
 		Student();
+
 	public:
 		Student(const std::string &_name, int _num);
 		Student( Student const & src );
